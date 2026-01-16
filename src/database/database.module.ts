@@ -13,7 +13,7 @@ export class DatabaseModule {
 			global: true,
 			module: DatabaseModule,
 			providers: [DatabaseService, { provide: DRIZZLE_PROVIDE_KEY, useValue: db }],
-			exports: [DatabaseService]
+			exports: [DatabaseService, DRIZZLE_PROVIDE_KEY]
 		};
 	}
 
@@ -25,7 +25,7 @@ export class DatabaseModule {
 			module: DatabaseModule,
 			imports: options.imports,
 			providers: [DatabaseService, asyncProvider],
-			exports: [DatabaseService]
+			exports: [DatabaseService, DRIZZLE_PROVIDE_KEY]
 		};
 	}
 

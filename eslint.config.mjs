@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
 	{
-		ignores: ['eslint.config.mjs', 'drizzle.config.js']
+		ignores: ['eslint.config.mjs', 'drizzle.config.js', 'better-auth.config.js']
 	},
 	eslint.configs.recommended,
 	...tseslint.configs.recommended,

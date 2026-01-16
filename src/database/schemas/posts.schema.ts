@@ -11,7 +11,7 @@ export const posts = pgTable('posts', {
 	imageFileId: uuid()
 		.references(() => files.id)
 		.notNull(),
-	authorId: uuid()
+	authorId: text()
 		.references(() => users.id)
 		.notNull(),
 	createdAt: timestamp({ withTimezone: true }).defaultNow().notNull(),
